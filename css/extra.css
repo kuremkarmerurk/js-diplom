@@ -1,0 +1,170 @@
+.slider-arrow{
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    opacity: 0.5;
+}
+.slider-arrow:hover{
+    opacity: 1;
+}
+
+.slider-arrow img{
+    width: 100%;
+}
+
+.card-active .card__controls-arrow, .card-active .card__title{
+    opacity: 1;
+}
+
+.card{
+    position: relative;
+    min-width: 307px;
+    cursor: pointer;    
+}
+
+.feed__item:not(.feed__item-active){    
+    max-height: 80%;
+    min-height: 80%
+}
+.feed__slider{
+    position: relative;
+}
+
+.card-left{ 
+    animation-name: slidesl;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slidesl {
+    0%   {  transform:translate(0)    }
+    100% {  transform:translate(-335px) }
+}
+
+.feed__item-left{ 
+    animation-name: slidesl2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slidesl2 {
+    0%   {  transform:translate(0)    }
+    100% {  transform:translate(-607px) }
+}
+
+.feed__item-right{ 
+    animation-name: slidesr2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slidesr2 {
+    0%   {  transform:translate(-607px)    }
+    100% {  transform:translate(0) }
+}
+
+.card-right{ 
+    animation-name: slidesr;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+     
+@keyframes slidesr {
+    0%   {  transform:translate(-335px)    }
+    100% {  transform:translate(0) }
+}
+
+
+.slider-right{
+    left: 70px;
+    transform: rotate(180deg);
+}
+
+.feed__slider .slider-right{
+    left: 47vw;
+}
+
+.feed__slider .slider-left{
+    left: 42vw;
+}
+
+.showup__content{
+    padding: 20px 0 20px 63px;
+}
+
+.showup__content-title{
+    padding: 20px 0;
+    position: relative;
+}
+
+.showup__content-slider, .modules__content-slider, .feed__slider{
+    display: flex;
+    padding: 20px 0 20px 20px;
+    overflow: hidden;
+}
+
+.modules__content-slider{
+    padding: 20px 0 30px 20px;
+}
+
+.fadeIn{animation:fadeIn 1s forwards}
+
+.loremIpsum{
+    margin-top: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: -.28px;
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;transform:scale(0)}
+    100%{opacity:1;transform:scale(1)}
+}
+
+.fadeOut{animation:fadeOut 1s forwards}
+
+@keyframes fadeOut{
+    0%{opacity:1;transform:scale(1)}
+    100%{opacity:0;transform:scale(0)}
+}
+
+.hanson{
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+.status{
+    position: relative;
+    background: url("../img/abstract-ocean.jpg") center no-repeat;
+    background-size: 250% 250%;
+    padding: 35px 88px 50px 88px;
+    z-index: 0;
+}
+
+.status::after { 
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.status-img{
+    margin: 10px auto;
+    display: block;
+    max-width: 100px;
+}
+
+.status-txt{
+    font-size: 23px;
+    text-align: center;
+    font-family: Mark, sans-serif;
+    color: white;
+}
