@@ -22,7 +22,7 @@
 /*!******************************!*\
   !*** ./js/src/parts/mask.js ***!
   \******************************/
-/*! no static exports found */function(e,o){e.exports=function(){var e=document.getElementById("phone");e.addEventListener("click",function(){e.value||(e.value="+1(")}),e.addEventListener("input",function(){var o=e.value.length<4?"+1(".split(""):e.value.split(""),s="+1(___)___-_____".split("");o.length<s.length?o[o.length-1].match(/[0-9]/)?("_"!=s[o.length-1]&&o.splice(o.length-1,0,s[o.length-1]),e.value=o.join("")):(o.length>4&&o.pop(),e.value=o.join("")):(o.pop(),e.value=o.join(""))}),e.addEventListener("focusout",function(){"+1("==e.value&&(e.value="")})}},"./js/src/parts/video.js":
+/*! no static exports found */function(e,o){e.exports=function(){var e=document.getElementById("phone");e.addEventListener("click",function(){e.value||(e.value="+1(")}),e.addEventListener("input",function(){var o=e.value.length<4?"+1(".split(""):e.value.split(""),s="+1(___)___-_____".split("");o.length<s.length?o[o.length-1].match(/[0-9]/)?("_"!=s[o.length-1]&&o.splice(o.length-1,0,s[o.length-1]),e.value=o.join("")):(o.length>3&&o.pop(),e.value=o.join("")):(o.pop(),e.value=o.join(""))}),e.addEventListener("focusout",function(){"+1("==e.value&&(e.value="")})}},"./js/src/parts/video.js":
 /*!*******************************!*\
   !*** ./js/src/parts/video.js ***!
   \*******************************/

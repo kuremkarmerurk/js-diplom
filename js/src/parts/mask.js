@@ -12,13 +12,12 @@ function mask() {
             map = "+1(___)___-_____".split('');
             if( val.length < map.length ){
                 if( val[val.length-1].match(/[0-9]/) ){
-                    //map[val.length-1] == '_'
                     if(map[val.length - 1] != '_'){
                         val.splice(val.length - 1, 0 ,map[val.length - 1]);
                     }
                     phone.value = val.join('');
                 } else {                    
-                    if (val.length > 4){
+                    if (val.length > 3){
                         val.pop();
                     }                    
                     phone.value = val.join('');
