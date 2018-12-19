@@ -4,7 +4,7 @@ function showVideo(){
         showup = document.querySelector('.showup'),
         
 
-        moduleApp = document.querySelector('.moduleapp'),        
+        input = [...document.getElementsByTagName('input')],       
         frame = document.querySelector('#frame'),
         play;
 
@@ -19,37 +19,17 @@ function showVideo(){
         });
     }   
     
-
-    if(moduleApp){
-        let playModule = [...moduleApp.querySelectorAll('.play')],
-            videoItem = [...moduleApp.querySelectorAll('.module__video-item')];
-        playModule.forEach((element,index)=>{
-            play = element;
-            if(index % 2 == 0){
-                element.addEventListener('click',()=>{
-                    
-                        frame.src = element.dataset.url;
-                        overlay.style.display = "flex"; 
-                        document.body.style.overflow = 'hidden';
-                        playModule[index+1].innerHTML = element.innerHTML;
-                        videoItem[index+1].style.opacity = 1;
-                        playModule[index+1].addEventListener('click',()=>{                     
-                            frame.src = playModule[index+1].dataset.url;
-                            overlay.style.display = "flex"; 
-                            document.body.style.overflow = 'hidden';
-                        });
-                });
-            }  
-        });        
+    function clearInput() {
+        input.forEach(function(element,index){
+            input[index].value = '';
+        });
     }
-    
 
     close.addEventListener('click',()=>{
-        frame.src = play.dataset.url;
-        frame.style.display = "flex";
         if(document.querySelector('.status')){document.querySelector('.status').remove();}
         overlay.style.display = "none";
         document.body.style.overflow = '';
+        clearInput();
     });
 
 

@@ -17,7 +17,7 @@ let message = {
     pageJoin = document.querySelector('.join'),
     formJoin = pageJoin.querySelector('.form'),
     formJoinEmail = formJoin.querySelector('input[type=email]'),
-    input = [...document.getElementsByTagName('input')],
+    
 
     pageSchedule = document.querySelector('.schedule'),
     formSchedule = pageSchedule.querySelector('.form'),
@@ -37,11 +37,7 @@ let message = {
 
     //console.log(formJoinEmail);
 
-    function clearInput() {
-        input.forEach(function(element,index){
-            input[index].value = '';
-        });
-    }
+    
 
     function formRequest(event,f){
         event.preventDefault();
@@ -91,8 +87,7 @@ let message = {
                     statusImg.src = message.failure.img;
                     statusTxt.innerHTML = message.failure.txt;
                     overlay.style.display = "flex";
-                })
-                .then(clearInput); 
+                }); 
         });
     }
 

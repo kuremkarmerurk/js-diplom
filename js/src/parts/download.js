@@ -6,6 +6,7 @@ function download(){
         downloadLink.innerHTML = element.innerHTML;
         downloadLink.classList.add('download');
         downloadLink.href = 'downloads/download' + (index + 1) + '-min.pdf';
+        downloadLink.download = 'download' + (index + 1) + '.pdf';
         downloadLink.target = '_blank';
         element.classList.remove('download');
         element.innerHTML = '';
