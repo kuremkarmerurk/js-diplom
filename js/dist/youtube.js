@@ -29,6 +29,10 @@
                             overlay.style.display = "flex"; 
                             document.body.style.overflow = 'hidden';
                         });
+
+                        playNext.removeAttribute("id");
+                        playNow.removeAttribute("id");
+                        playNextWrapper.removeAttribute("id");
                 }
             }
             function loadVideoById(videoId) {
